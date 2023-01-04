@@ -14,4 +14,11 @@ public class DollarTest {
         product = five.times(3);
         assertEquals(15, product.amount);
     }
+
+    @Test
+    void testEquality() {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
+        assertFalse(new Dollar(5).equals(new Dollar(6))); // 삼각측량을 이용하기 위한 테스트 추가
+
+    }
 }
